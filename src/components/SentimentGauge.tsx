@@ -32,18 +32,19 @@ export function SentimentGauge({ sentiment, className = '' }: SentimentGaugeProp
     // Background arc
     g.append('path')
       .datum({ endAngle: Math.PI / 2 })
-      .style('fill', '#1f2937')
+      .style('fill', '#1F2937') // background.light
       .attr('d', arc as any);
 
     // Sentiment arc
     const sentimentAngle = -Math.PI / 2 + (sentiment + 1) * Math.PI / 2;
-    const sentimentColor = sentiment > 0.2 ? '#10b981' : 
-                          sentiment < -0.2 ? '#ef4444' : '#6b7280';
+    const sentimentColor = sentiment > 0.2 ? '#10B981' : // secondary
+                          sentiment < -0.2 ? '#EF4444' : // red for negative
+                          '#6B7280'; // neutral gray
 
     g.append('path')
       .datum({ endAngle: sentimentAngle })
       .style('fill', sentimentColor)
-      .style('filter', 'drop-shadow(0 0 8px currentColor)')
+      .style('opacity', 0.9)
       .attr('d', arc as any);
 
     // Center text
@@ -52,14 +53,14 @@ export function SentimentGauge({ sentiment, className = '' }: SentimentGaugeProp
       .attr('dy', '-0.5em')
       .style('font-size', '24px')
       .style('font-weight', 'bold')
-      .style('fill', sentimentColor)
+      .style('fill', '#F3F4F6') // text.primary
       .text((sentiment * 100).toFixed(0));
 
     g.append('text')
       .attr('text-anchor', 'middle')
       .attr('dy', '1em')
       .style('font-size', '12px')
-      .style('fill', '#9ca3af')
+      .style('fill', '#9CA3AF') // text.secondary
       .text('SENTIMENT');
 
     // Needle
@@ -71,13 +72,13 @@ export function SentimentGauge({ sentiment, className = '' }: SentimentGaugeProp
       .attr('y1', 0)
       .attr('x2', needleLength * Math.cos(needleAngle))
       .attr('y2', needleLength * Math.sin(needleAngle))
-      .style('stroke', '#ffffff')
+      .style('stroke', '#F3F4F6') // text.primary
       .style('stroke-width', 2)
       .style('stroke-linecap', 'round');
 
     g.append('circle')
       .attr('r', 4)
-      .style('fill', '#ffffff');
+      .style('fill', '#F3F4F6'); // text.primary
 
   }, [sentiment]);
 
