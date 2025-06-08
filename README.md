@@ -302,13 +302,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Tailwind CSS** for utility-first styling
 - **Lucide** for consistent iconography
 
-## 📞 Support
-
-For support and questions:
-- Create an issue on GitHub
-- Email: support@sentimentai.com
-- Documentation: [docs.sentimentai.com](https://docs.sentimentai.com)
-
 ---
 
 **Built with ❤️ by the SentimentAI Team**
