@@ -6,7 +6,7 @@ A production-ready, real-time sentiment analysis dashboard that monitors social 
 
 ## 🚀 Live Demo
 
-**[View Live Dashboard](https://glistening-licorice-9156bd.netlify.app)**
+**[View Live Dashboard](https://pulsesenti-realtime-sentiment.netlify.app)**
 
 ## ✨ Features
 
