@@ -96,23 +96,27 @@ src/
 ## 🎨 Design System
 
 ### Color Palette
-- **Primary**: Emerald (positive sentiment)
-- **Secondary**: Red (negative sentiment)  
-- **Neutral**: Slate gray (neutral sentiment)
-- **Accent**: Blue (system elements)
-- **Background**: Dark gradient (slate-900 to slate-800)
+- **Primary**: Modern Blue (#3B82F6) - For primary actions and key elements
+- **Secondary**: Emerald Green (#10B981) - For secondary actions and success states
+- **Accent**: Purple (#8B5CF6) - For highlights and special elements
+- **Background**: Dark gradient from #111827 to #0F172A
+- **Text**: 
+  - Primary: Light Gray (#F3F4F6)
+  - Secondary: Muted Gray (#9CA3AF)
+  - Accent: Light Blue (#60A5FA)
+- **Borders**: Subtle Gray (#374151)
 
 ### Typography
-- **Headings**: Bold, white text with proper hierarchy
-- **Body**: Slate-200 for readability
-- **Metrics**: Large, bold numbers with color coding
-- **Labels**: Slate-400 for secondary information
+- **Headings**: Clean, modern sans-serif with proper hierarchy
+- **Body**: High-contrast text for optimal readability
+- **Metrics**: Bold numbers with accent colors
+- **Labels**: Muted gray for secondary information
 
 ### Components
-- **Glass morphism**: Backdrop blur with transparency
-- **Rounded corners**: 12px border radius for modern feel
-- **Hover states**: Smooth transitions and scale effects
-- **Custom scrollbars**: Styled for dark theme consistency
+- **Cards**: Subtle elevation with elegant shadows
+- **Buttons**: Clean, modern design with hover effects
+- **Sections**: Light background with subtle borders
+- **Scrollbars**: Minimalist design with smooth interactions
 
 ## 📊 Data Models
 

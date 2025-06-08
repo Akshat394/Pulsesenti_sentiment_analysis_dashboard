@@ -4,13 +4,13 @@
 
 /* Base styles */
 body {
-  @apply bg-cyber-gradient text-holographic;
+  @apply bg-gradient-dark text-text-primary;
 }
 
 /* Custom scrollbar styles */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: theme('colors.quantum-gray') theme('colors.deep-space');
+  scrollbar-color: theme('colors.border.light') theme('colors.background.dark');
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -18,15 +18,15 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  @apply bg-deep-space rounded-cyber;
+  @apply bg-background-dark rounded-xl;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  @apply bg-quantum-gray rounded-cyber;
+  @apply bg-border-light rounded-xl;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  @apply bg-cyber-blue;
+  @apply bg-primary;
 }
 
 /* Smooth transitions for all elements */
@@ -34,9 +34,9 @@ body {
   @apply transition-all duration-300 ease-in-out;
 }
 
-/* Glow effects for interactive elements */
-.glow-on-hover:hover {
-  @apply shadow-neon-blue;
+/* Hover effects for interactive elements */
+.hover-effect:hover {
+  @apply shadow-hover;
 }
 
 /* Animation keyframes */
@@ -55,44 +55,52 @@ body {
   animation: fadeInUp 0.6s ease-out;
 }
 
-/* Gradient borders */
-.gradient-border {
-  @apply bg-gradient-to-r from-cyber-blue to-neon-purple p-[1px] rounded-cyber;
+/* Card styles */
+.card {
+  @apply bg-background-light rounded-xl border border-border-light shadow-elegant;
 }
 
-.gradient-border > div {
-  @apply bg-deep-space rounded-cyber;
+/* Button styles */
+.button {
+  @apply px-4 py-2 rounded-xl bg-primary text-text-primary
+         hover:shadow-hover transition-all duration-300;
 }
 
-/* Cyberpunk text effects */
-.cyber-text {
-  @apply text-holographic;
-  text-shadow: 0 0 10px theme('colors.cyber-blue');
-}
-
-/* Neon button styles */
-.neon-button {
-  @apply px-4 py-2 rounded-cyber bg-electric-gray text-holographic
-         hover:shadow-neon-blue transition-all duration-300;
+.button-secondary {
+  @apply px-4 py-2 rounded-xl bg-secondary text-text-primary
+         hover:shadow-hover transition-all duration-300;
 }
 
 /* Glass card effect */
 .glass-card {
-  @apply bg-electric-gray/30 backdrop-blur-cyber rounded-cyber border border-cyber-blue/20;
+  @apply bg-background-light/80 backdrop-blur-sm rounded-xl border border-border-light/20 shadow-elegant;
 }
 
-/* Animated background */
-.cyber-bg {
-  @apply relative overflow-hidden;
+/* Section styles */
+.section {
+  @apply p-6 rounded-xl bg-background-light border border-border-light;
 }
 
-.cyber-bg::before {
-  content: '';
-  @apply absolute inset-0 bg-cyber-gradient opacity-50;
-  animation: pulse 4s ease-in-out infinite;
+/* Text styles */
+.heading {
+  @apply text-text-primary font-semibold;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 0.7; }
+.subheading {
+  @apply text-text-secondary;
+}
+
+/* Metric styles */
+.metric {
+  @apply text-text-accent font-bold;
+}
+
+/* Grid layout */
+.grid-layout {
+  @apply grid gap-6;
+}
+
+/* Responsive container */
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }

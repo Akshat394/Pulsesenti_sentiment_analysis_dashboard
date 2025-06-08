@@ -4,28 +4,36 @@ export default {
   theme: {
     extend: {
       colors: {
-        'cyber-blue': '#00F5FF',
-        'neon-purple': '#B026FF',
-        'electric-gray': '#2A2F4F',
-        'plasma-green': '#39FF14',
-        'deep-space': '#0A0A2A',
-        'cosmic-purple': '#1A1A3A',
-        'holographic': '#F0F8FF',
-        'quantum-gray': '#4A4A6A',
+        'primary': '#3B82F6',      // Modern blue
+        'secondary': '#10B981',    // Emerald green
+        'accent': '#8B5CF6',       // Purple
+        'background': {
+          'dark': '#111827',       // Dark background
+          'darker': '#0F172A',     // Darker background
+          'light': '#1F2937',      // Lighter background
+        },
+        'text': {
+          'primary': '#F3F4F6',    // Light text
+          'secondary': '#9CA3AF',  // Muted text
+          'accent': '#60A5FA',     // Accent text
+        },
+        'border': {
+          'light': '#374151',      // Border color
+          'dark': '#1F2937',       // Dark border
+        }
       },
       backgroundImage: {
-        'cyber-gradient': 'linear-gradient(to bottom right, #0A0A2A, #1A1A3A)',
+        'gradient-dark': 'linear-gradient(to bottom right, #111827, #0F172A)',
       },
       boxShadow: {
-        'neon-blue': '0 0 5px #00F5FF, 0 0 20px #00F5FF',
-        'neon-purple': '0 0 5px #B026FF, 0 0 20px #B026FF',
-        'neon-green': '0 0 5px #39FF14, 0 0 20px #39FF14',
+        'elegant': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+        'hover': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
       },
       borderRadius: {
-        'cyber': '16px',
+        'xl': '1rem',
       },
       backdropBlur: {
-        'cyber': '20px',
+        'sm': '4px',
       },
     },
   },
